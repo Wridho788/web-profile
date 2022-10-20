@@ -1,14 +1,18 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
+import Feature from '../components/Feature';
+import Pricing from '../components/Pricing';
+import Hero from '../components/Hero';
+import Layout from '../components/Layout/Layout';
+import SeoHead from '../components/SeoHead';
 
 export default function Home() {
   return (
-    <div class='max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl'>
-      <p class='mt-2 text-slate-500'>
-        Looking to take your team away on a retreat to enjoy awesome food and
-        take in some sunshine? We have a list of places to do just that.
-      </p>
-    </div>
+    <>
+      <SeoHead title='LaslesVPN Landing Page' />
+      <Layout>
+        <Hero />
+        <Feature />
+        <Pricing />
+      </Layout>
+    </>
   );
 }
